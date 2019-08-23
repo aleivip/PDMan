@@ -6,11 +6,11 @@
       "entities": [
         {
           "title": "tb_area_code",
-          "chnname": "",
+          "chnname": "省市5级联动表",
           "fields": [
             {
-              "name": "code",
-              "type": "BIGINT UNSIGNED_20",
+              "name": "id",
+              "type": "Integer",
               "chnname": "区划代码",
               "remark": "",
               "pk": true,
@@ -39,8 +39,8 @@
               "defaultValue": ""
             },
             {
-              "name": "pcode",
-              "type": "BIGINT_19",
+              "name": "parent_id",
+              "type": "Integer",
               "chnname": "父级区划代码",
               "remark": "",
               "pk": false,
@@ -48,16 +48,63 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_address",
-          "chnname": "",
+          "chnname": "用户地址表",
           "fields": [
             {
               "name": "id",
               "type": "INT_10",
-              "chnname": "",
+              "chnname": "id",
               "remark": "",
               "pk": true,
               "notNull": true,
@@ -65,7 +112,7 @@
               "defaultValue": ""
             },
             {
-              "name": "user_info_id",
+              "name": "user_id",
               "type": "INT_10",
               "chnname": "所属用户",
               "remark": "",
@@ -184,11 +231,58 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_brand",
-          "chnname": "",
+          "chnname": "品牌表",
           "fields": [
             {
               "name": "id",
@@ -241,6 +335,34 @@
               "defaultValue": ""
             },
             {
+              "name": "order",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "排序",
+              "defaultValue": "999"
+            },
+            {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_importance",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否重要",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_delete",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否删除",
+              "defaultValue": "0"
+            },
+            {
               "name": "create_date",
               "type": "DATETIME",
               "chnname": "创建时间",
@@ -290,6 +412,53 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
@@ -326,11 +495,58 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_category",
-          "chnname": "",
+          "chnname": "商品分类",
           "fields": [
             {
               "name": "id",
@@ -363,6 +579,41 @@
               "defaultValue": ""
             },
             {
+              "name": "order",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "排序",
+              "defaultValue": "9999"
+            },
+            {
+              "name": "is_default",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否默认",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_importance",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否重要",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_delete",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否删除",
+              "defaultValue": "0"
+            },
+            {
               "name": "create_date",
               "type": "DATETIME",
               "chnname": "创建时间",
@@ -372,11 +623,58 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_company_info",
-          "chnname": "",
+          "chnname": "厂家表",
           "fields": [
             {
               "name": "id",
@@ -548,11 +846,58 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_dictionary",
-          "chnname": "",
+          "chnname": "字典表",
           "fields": [
             {
               "name": "id",
@@ -663,6 +1008,53 @@
               "notNull": false,
               "autoIncrement": false,
               "defaultValue": ""
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
             }
           ]
         },
@@ -846,7 +1238,7 @@
         },
         {
           "title": "tb_product",
-          "chnname": "",
+          "chnname": "商品表",
           "fields": [
             {
               "name": "id",
@@ -920,13 +1312,26 @@
             },
             {
               "name": "category_id",
-              "type": "INT_10",
-              "chnname": "二级分类id",
+              "type": "Integer",
+              "chnname": "分类id",
               "remark": "",
               "pk": false,
               "notNull": false,
               "autoIncrement": false,
               "defaultValue": ""
+            },
+            {
+              "name": "brand_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "品牌id"
+            },
+            {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
             },
             {
               "name": "create_user_id",
@@ -998,16 +1403,63 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_product_category",
-          "chnname": "",
+          "chnname": "品牌分类表",
           "fields": [
             {
               "name": "id",
               "type": "INT_10",
-              "chnname": "",
+              "chnname": "id",
               "remark": "",
               "pk": true,
               "notNull": true,
@@ -1042,7 +1494,21 @@
               "pk": false,
               "notNull": false,
               "autoIncrement": false,
-              "defaultValue": ""
+              "defaultValue": "9999"
+            },
+            {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_importance",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否重要",
+              "defaultValue": "0"
             },
             {
               "name": "create_date",
@@ -1064,11 +1530,58 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_specification",
-          "chnname": "",
+          "chnname": "商品规格",
           "fields": [
             {
               "name": "id",
@@ -1113,7 +1626,7 @@
             {
               "name": "price",
               "type": "FLOAT_12",
-              "chnname": "规格项价格",
+              "chnname": "商品进货价",
               "remark": "",
               "pk": false,
               "notNull": false,
@@ -1121,14 +1634,27 @@
               "defaultValue": ""
             },
             {
-              "name": "product",
-              "type": "INT_10",
+              "name": "default_price",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "商品默认出货价格"
+            },
+            {
+              "name": "untitled",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "商品条形码"
+            },
+            {
+              "name": "bar_code",
+              "type": "ShortString",
               "chnname": "商品id",
               "remark": "",
               "pk": false,
-              "notNull": true,
+              "notNull": false,
               "autoIncrement": false,
-              "defaultValue": ""
+              "defaultValue": "",
+              "uiHint": "Text"
             },
             {
               "name": "specification_template_id",
@@ -1151,14 +1677,43 @@
               "defaultValue": ""
             },
             {
-              "name": "orders",
+              "name": "is_promotion",
               "type": "INT_10",
-              "chnname": "排序",
+              "remark": "",
+              "chnname": "是否促销",
+              "defaultValue": "0"
+            },
+            {
+              "name": "promotion_type",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "促销形式",
+              "defaultValue": "0"
+            },
+            {
+              "name": "promotion_value",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "促销值",
+              "defaultValue": "0",
+              "uiHint": "Number"
+            },
+            {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_importance",
+              "type": "INT_10",
+              "chnname": "是否重要",
               "remark": "",
               "pk": false,
               "notNull": false,
               "autoIncrement": false,
-              "defaultValue": ""
+              "defaultValue": "0"
             },
             {
               "name": "create_date",
@@ -1200,11 +1755,58 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_specification_option",
-          "chnname": "",
+          "chnname": "规格模板选项",
           "fields": [
             {
               "name": "id",
@@ -1237,6 +1839,20 @@
               "defaultValue": ""
             },
             {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_importance",
+              "type": "VARCHAR_10",
+              "remark": "",
+              "chnname": "是否重要",
+              "defaultValue": "0"
+            },
+            {
               "name": "create_date",
               "type": "DATETIME",
               "chnname": "创建时间",
@@ -1266,11 +1882,58 @@
               "autoIncrement": false,
               "defaultValue": ""
             }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
           ]
         },
         {
           "title": "tb_specification_template",
-          "chnname": "",
+          "chnname": "规格模板",
           "fields": [
             {
               "name": "id",
@@ -1361,6 +2024,53 @@
               "notNull": false,
               "autoIncrement": false,
               "defaultValue": ""
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
             }
           ]
         },
@@ -2108,7 +2818,7 @@
           ]
         },
         {
-          "title": "tb_user_login",
+          "title": "tb_user_login_log",
           "chnname": "用户登录日志表",
           "fields": [
             {
@@ -2579,41 +3289,991 @@
             }
           ],
           "chnname": "仓库和用户关联表"
+        },
+        {
+          "title": "tb_link_ware_house_and_product",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "id",
+              "autoIncrement": true,
+              "notNull": true,
+              "pk": true,
+              "uiHint": "Number"
+            },
+            {
+              "name": "ware_house_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "仓库id",
+              "uiHint": "Number",
+              "notNull": true
+            },
+            {
+              "name": "product_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "商品id",
+              "notNull": true,
+              "uiHint": "Number"
+            },
+            {
+              "name": "inventory",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "库存数量",
+              "defaultValue": "0",
+              "uiHint": "Number"
+            },
+            {
+              "name": "order",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "排序",
+              "defaultValue": "9999",
+              "uiHint": "Number"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "入库时间",
+              "uiHint": "DatePicker"
+            },
+            {
+              "name": "update_time",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "进货时间",
+              "uiHint": "DatePicker"
+            },
+            {
+              "name": "remark",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "备注",
+              "uiHint": "TextArea"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "仓库和商品关联表"
+        },
+        {
+          "title": "tb_user_log",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "操作人",
+              "pk": false,
+              "notNull": true
+            },
+            {
+              "name": "operation_type",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "操作类型"
+            },
+            {
+              "name": "operation",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "操作"
+            },
+            {
+              "name": "operation_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "操作时间"
+            },
+            {
+              "name": "remark",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "备注",
+              "uiHint": "TextArea"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "用户操作日志"
+        },
+        {
+          "title": "tb_system_config",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "name",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "配置名称",
+              "uiHint": "Text"
+            },
+            {
+              "name": "type",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "配置类型",
+              "defaultValue": "0"
+            },
+            {
+              "name": "code",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "唯一code",
+              "uiHint": "Text"
+            },
+            {
+              "name": "key",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "键名",
+              "uiHint": "Text"
+            },
+            {
+              "name": "value",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "值",
+              "uiHint": "Text"
+            },
+            {
+              "name": "update_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改日期",
+              "uiHint": "Text"
+            },
+            {
+              "name": "remark",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "备注",
+              "uiHint": "TextArea"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统配置"
+        },
+        {
+          "title": "tb_product_into_order",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true,
+              "uiHint": "Number"
+            },
+            {
+              "name": "code",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "订单号",
+              "notNull": true,
+              "uiHint": "Text"
+            },
+            {
+              "name": "discounts",
+              "type": "DOUBLE_22",
+              "remark": "",
+              "chnname": "优惠券",
+              "uiHint": "Money"
+            },
+            {
+              "name": "is_promotion",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否促销",
+              "defaultValue": "0"
+            },
+            {
+              "name": "old_price",
+              "type": "DOUBLE_22",
+              "remark": "",
+              "chnname": "原金额",
+              "uiHint": "Money"
+            },
+            {
+              "name": "price",
+              "type": "DOUBLE_22",
+              "remark": "",
+              "chnname": "金额",
+              "uiHint": "Money"
+            },
+            {
+              "name": "status",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "订单状态",
+              "defaultValue": "0",
+              "uiHint": "Money"
+            },
+            {
+              "name": "bill_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "账单id",
+              "uiHint": "Number"
+            },
+            {
+              "name": "user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "订单用户"
+            },
+            {
+              "name": "notarize_user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "出货确认人"
+            },
+            {
+              "name": "delivery_user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "发货人"
+            },
+            {
+              "name": "express_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "物流"
+            },
+            {
+              "name": "express_order_code",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "物流单据号",
+              "uiHint": "Text"
+            },
+            {
+              "name": "address_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "收货地址"
+            },
+            {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_importance",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否重要",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_delete",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否删除",
+              "defaultValue": "0"
+            },
+            {
+              "name": "create_user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "create_date",
+              "type": "DATETIME",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "update_user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "update_date",
+              "type": "DATETIME",
+              "remark": "",
+              "chnname": "更新时间"
+            },
+            {
+              "name": "remark",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "订单备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "用户订单表"
+        },
+        {
+          "title": "tb_express",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "name",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "物流名称"
+            },
+            {
+              "name": "linkman",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "联系人"
+            },
+            {
+              "name": "tels",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "联系电话"
+            },
+            {
+              "name": "priority",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "优先级",
+              "defaultValue": "0"
+            },
+            {
+              "name": "arrive_address",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "到达地点",
+              "defaultValue": "0"
+            },
+            {
+              "name": "price",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "价格"
+            },
+            {
+              "name": "orders",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "排序",
+              "defaultValue": "9999"
+            },
+            {
+              "name": "is_top",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否置顶",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_importance",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否重要",
+              "defaultValue": "0"
+            },
+            {
+              "name": "status",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否开启",
+              "defaultValue": "0"
+            },
+            {
+              "name": "is_delete",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否删除",
+              "defaultValue": "0"
+            },
+            {
+              "name": "create_user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "添加人"
+            },
+            {
+              "name": "create_date",
+              "type": "DATETIME",
+              "remark": "",
+              "chnname": "添加时间"
+            },
+            {
+              "name": "update_user_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "修改人"
+            },
+            {
+              "name": "update_user",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "物流信息"
+        },
+        {
+          "title": "tb_order_product",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "order_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "订单id"
+            },
+            {
+              "name": "product_specification_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "商品id"
+            },
+            {
+              "name": "is_promotion",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "是否促销",
+              "defaultValue": "0"
+            },
+            {
+              "name": "promotion_type",
+              "type": "INT_10",
+              "remark": "",
+              "chnname": "促销形式",
+              "defaultValue": "0"
+            },
+            {
+              "name": "promotion_value",
+              "type": "Ratio",
+              "remark": "",
+              "chnname": "促销值",
+              "defaultValue": "0"
+            },
+            {
+              "name": "old_price",
+              "type": "DOUBLE_22",
+              "remark": "",
+              "chnname": "原价格",
+              "defaultValue": "0"
+            },
+            {
+              "name": "price",
+              "type": "DOUBLE_22",
+              "remark": "",
+              "chnname": "购买价格",
+              "defaultValue": "0"
+            },
+            {
+              "name": "total_price",
+              "type": "DOUBLE_22",
+              "remark": "",
+              "chnname": "总价",
+              "defaultValue": "0"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "订单商品表"
+        },
+        {
+          "title": "tb_bill",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "name",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "账单名称"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "账目表"
+        },
+        {
+          "title": "tb_memo",
+          "fields": [
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "备忘录"
         }
       ],
       "graphCanvas": {
         "nodes": [
           {
             "shape": "table",
-            "title": "tb_area_code",
-            "moduleName": false,
-            "x": 234.796875,
-            "y": 98,
-            "id": "f0aba3bd"
-          },
-          {
-            "shape": "table",
-            "title": "tb_link_ware_house_and_user",
-            "moduleName": false,
-            "x": 980,
-            "y": 110,
-            "id": "36678153"
-          },
-          {
-            "shape": "table",
-            "title": "tb_user_login",
+            "title": "tb_user_login_log",
             "moduleName": false,
             "x": 910,
             "y": 320,
             "id": "650677b1"
-          },
-          {
-            "shape": "table",
-            "title": "tb_ware_house",
-            "moduleName": false,
-            "x": 600,
-            "y": 60,
-            "id": "4e97e309"
           },
           {
             "shape": "table",
@@ -2635,33 +4295,137 @@
             "shape": "table",
             "title": "tb_link_user_role_and_menu",
             "moduleName": false,
-            "x": 1160,
-            "y": 1000,
+            "x": 1150,
+            "y": 990,
             "id": "b49514d5"
-          },
-          {
-            "shape": "table",
-            "title": "tb_user",
-            "moduleName": false,
-            "x": 1560,
-            "y": 580,
-            "id": "e8ac3cd9"
           },
           {
             "shape": "table",
             "title": "tb_menu",
             "moduleName": false,
-            "x": 1620,
+            "x": 1560,
             "y": 1050,
             "id": "4de297cf"
           },
           {
             "shape": "table",
+            "title": "tb_link_ware_house_and_user",
+            "moduleName": false,
+            "x": 980,
+            "y": 110,
+            "id": "36678153"
+          },
+          {
+            "shape": "table",
+            "title": "tb_specification",
+            "moduleName": false,
+            "x": 1800,
+            "y": -200,
+            "id": "f4237f52"
+          },
+          {
+            "shape": "table",
+            "title": "tb_specification_template",
+            "moduleName": false,
+            "x": 1830,
+            "y": -510,
+            "id": "5acd32dc"
+          },
+          {
+            "shape": "table",
+            "title": "tb_specification_option",
+            "moduleName": false,
+            "x": 1470,
+            "y": -510,
+            "id": "5b7d52e7"
+          },
+          {
+            "shape": "table",
+            "title": "tb_product_category",
+            "moduleName": false,
+            "x": 2230,
+            "y": 190,
+            "id": "dc80dd3e"
+          },
+          {
+            "shape": "table",
             "title": "tb_product",
             "moduleName": false,
-            "x": 2310,
-            "y": 570,
+            "x": 1800,
+            "y": 150,
             "id": "910de29c"
+          },
+          {
+            "shape": "table",
+            "title": "tb_user",
+            "moduleName": false,
+            "x": 1470,
+            "y": 590,
+            "id": "e8ac3cd9"
+          },
+          {
+            "shape": "table",
+            "title": "tb_category",
+            "moduleName": false,
+            "x": 1880,
+            "y": 450,
+            "id": "d41b3fc5"
+          },
+          {
+            "shape": "table",
+            "title": "tb_ware_house",
+            "moduleName": false,
+            "x": 1080,
+            "y": -270,
+            "id": "4e97e309"
+          },
+          {
+            "shape": "table",
+            "title": "tb_link_ware_house_and_product",
+            "moduleName": false,
+            "x": 1370,
+            "y": -10,
+            "id": "cc4183ee"
+          },
+          {
+            "shape": "table",
+            "title": "tb_brand",
+            "moduleName": false,
+            "x": 1380,
+            "y": 250,
+            "id": "abdb8a01"
+          },
+          {
+            "shape": "table",
+            "title": "tb_company_info",
+            "moduleName": false,
+            "x": 530,
+            "y": 0,
+            "id": "848507d4"
+          },
+          {
+            "shape": "table",
+            "title": "tb_address",
+            "moduleName": false,
+            "x": 2030,
+            "y": 1050,
+            "id": "9bfc9add"
+          },
+          {
+            "shape": "table",
+            "title": "tb_dictionary",
+            "moduleName": false,
+            "x": 1910,
+            "y": 740,
+            "id": "b763457b"
+          },
+          {
+            "shape": "table",
+            "title": "tb_area_code",
+            "moduleName": false,
+            "x": 70,
+            "y": -10,
+            "id": "f0aba3bd"
           }
         ],
         "edges": [
@@ -2677,8 +4441,8 @@
                 "y": 292.3382352941177
               },
               {
-                "x": 1328.306640625,
-                "y": 442.10714285714283
+                "x": 1238.306640625,
+                "y": 452.10714285714283
               }
             ],
             "sourceAnchor": 3,
@@ -2696,8 +4460,8 @@
                 "y": 462.1136363636364
               },
               {
-                "x": 1328.306640625,
-                "y": 442.10714285714283
+                "x": 1238.306640625,
+                "y": 452.10714285714283
               }
             ],
             "sourceAnchor": 1,
@@ -2715,31 +4479,24 @@
                 "y": 92.40789473684211
               },
               {
-                "x": 1328.306640625,
-                "y": 442.10714285714283
+                "x": 1150,
+                "y": 90
+              },
+              {
+                "x": 1147.6967898855091,
+                "y": 230.44990249631985
+              },
+              {
+                "x": 1160,
+                "y": 300
+              },
+              {
+                "x": 1238.306640625,
+                "y": 452.10714285714283
               }
             ],
             "sourceAnchor": 5,
             "targetAnchor": 0
-          },
-          {
-            "shape": "erdRelation",
-            "relation": "0,n:1",
-            "source": "36678153",
-            "target": "4e97e309",
-            "id": "bb07421b",
-            "controlPoints": [
-              {
-                "x": 845.939453125,
-                "y": 72.30263157894737
-              },
-              {
-                "x": 798.9638671875,
-                "y": -27.85
-              }
-            ],
-            "sourceAnchor": 2,
-            "targetAnchor": 1
           },
           {
             "shape": "erdRelation",
@@ -2749,8 +4506,8 @@
             "id": "61d3ff1c",
             "controlPoints": [
               {
-                "x": 1328.306640625,
-                "y": 542.3928571428571
+                "x": 1238.306640625,
+                "y": 552.3928571428571
               },
               {
                 "x": 931.0400390625,
@@ -2768,8 +4525,8 @@
             "id": "d99ea6f5",
             "controlPoints": [
               {
-                "x": 991.6318359375,
-                "y": 952.2738095238095
+                "x": 981.6318359375,
+                "y": 942.2738095238095
               },
               {
                 "x": 931.0400390625,
@@ -2787,16 +4544,262 @@
             "id": "22e2afe2",
             "controlPoints": [
               {
-                "x": 1328.3681640625,
-                "y": 972.3690476190476
+                "x": 1318.3681640625,
+                "y": 962.3690476190476
               },
               {
-                "x": 1426.287109375,
+                "x": 1366.287109375,
                 "y": 942.1293103448276
               }
             ],
             "sourceAnchor": 5,
             "targetAnchor": 0
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "36678153",
+            "target": "4e97e309",
+            "id": "3bf78beb",
+            "controlPoints": [
+              {
+                "x": 845.939453125,
+                "y": 72.30263157894737
+              },
+              {
+                "x": 820,
+                "y": 10
+              },
+              {
+                "x": 820,
+                "y": -280
+              },
+              {
+                "x": 881.0361328125,
+                "y": -357.85
+              }
+            ],
+            "sourceAnchor": 2,
+            "targetAnchor": 0
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "cc4183ee",
+            "target": "910de29c",
+            "id": "d999b072",
+            "controlPoints": [
+              {
+                "x": 1512.4013671875,
+                "y": -27.59210526315789
+              },
+              {
+                "x": 1576.615234375,
+                "y": 2.1013513513513544
+              }
+            ],
+            "sourceAnchor": 5,
+            "targetAnchor": 0
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "cc4183ee",
+            "target": "4e97e309",
+            "id": "7e4555bb",
+            "controlPoints": [
+              {
+                "x": 1227.5986328125,
+                "y": -47.69736842105263
+              },
+              {
+                "x": 1210,
+                "y": -40
+              },
+              {
+                "x": 1220,
+                "y": -130
+              },
+              {
+                "x": 1320,
+                "y": -130
+              },
+              {
+                "x": 1320,
+                "y": -360
+              },
+              {
+                "x": 1278.9638671875,
+                "y": -357.85
+              }
+            ],
+            "sourceAnchor": 2,
+            "targetAnchor": 1
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "f4237f52",
+            "target": "910de29c",
+            "id": "462d08ba",
+            "controlPoints": [
+              {
+                "x": 1583.283203125,
+                "y": -227.5670731707317
+              },
+              {
+                "x": 1550,
+                "y": -200
+              },
+              {
+                "x": 1550,
+                "y": -10
+              },
+              {
+                "x": 1576.615234375,
+                "y": 2.1013513513513544
+              }
+            ],
+            "sourceAnchor": 14,
+            "targetAnchor": 0
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "f4237f52",
+            "target": "5acd32dc",
+            "id": "2108a811",
+            "controlPoints": [
+              {
+                "x": 2016.716796875,
+                "y": -207.51829268292684
+              },
+              {
+                "x": 2040,
+                "y": -210
+              },
+              {
+                "x": 2040,
+                "y": -460
+              },
+              {
+                "x": 2040,
+                "y": -580
+              },
+              {
+                "x": 2004.3564453125,
+                "y": -577.8214285714286
+              }
+            ],
+            "sourceAnchor": 17,
+            "targetAnchor": 1
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "5acd32dc",
+            "target": "5b7d52e7",
+            "id": "23ee7313",
+            "controlPoints": [
+              {
+                "x": 1655.6435546875,
+                "y": -537.6309523809524
+              },
+              {
+                "x": 1615.015625,
+                "y": -567.8026315789474
+              }
+            ],
+            "sourceAnchor": 4,
+            "targetAnchor": 1
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "dc80dd3e",
+            "target": "910de29c",
+            "id": "5cd6b04d",
+            "controlPoints": [
+              {
+                "x": 2091.658203125,
+                "y": 152.30263157894737
+              },
+              {
+                "x": 2023.384765625,
+                "y": 2.1013513513513544
+              }
+            ],
+            "sourceAnchor": 2,
+            "targetAnchor": 1
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "dc80dd3e",
+            "target": "d41b3fc5",
+            "id": "c92266bb",
+            "controlPoints": [
+              {
+                "x": 2091.658203125,
+                "y": 172.4078947368421
+              },
+              {
+                "x": 2029.685546875,
+                "y": 382.17857142857144
+              }
+            ],
+            "sourceAnchor": 4,
+            "targetAnchor": 1
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "910de29c",
+            "target": "abdb8a01",
+            "id": "18e812ac",
+            "controlPoints": [
+              {
+                "x": 1576.615234375,
+                "y": 162.53378378378378
+              },
+              {
+                "x": 1529.685546875,
+                "y": 132.1209677419355
+              }
+            ],
+            "sourceAnchor": 16,
+            "targetAnchor": 1
+          },
+          {
+            "shape": "erdRelation",
+            "relation": "0,n:1",
+            "source": "abdb8a01",
+            "target": "848507d4",
+            "id": "eab3e02c",
+            "controlPoints": [
+              {
+                "x": 1230.314453125,
+                "y": 192.31451612903226
+              },
+              {
+                "x": 1180,
+                "y": 190
+              },
+              {
+                "x": 1180,
+                "y": -110
+              },
+              {
+                "x": 850,
+                "y": -110
+              },
+              {
+                "x": 805.3896484375,
+                "y": -147.89864864864865
+              }
+            ],
+            "sourceAnchor": 6,
+            "targetAnchor": 1
           }
         ]
       },
@@ -2804,7 +4807,7 @@
         {
           "relation": "0,n:1",
           "from": {
-            "entity": "tb_user_login",
+            "entity": "tb_user_login_log",
             "field": "user_id"
           },
           "to": {
@@ -2831,17 +4834,6 @@
           },
           "to": {
             "entity": "tb_user",
-            "field": "id"
-          }
-        },
-        {
-          "relation": "0,n:1",
-          "from": {
-            "entity": "tb_link_ware_house_and_user",
-            "field": "ware_house_id"
-          },
-          "to": {
-            "entity": "tb_ware_house",
             "field": "id"
           }
         },
@@ -2875,6 +4867,116 @@
           },
           "to": {
             "entity": "tb_menu",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_link_ware_house_and_user",
+            "field": "ware_house_id"
+          },
+          "to": {
+            "entity": "tb_ware_house",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_link_ware_house_and_product",
+            "field": "product_id"
+          },
+          "to": {
+            "entity": "tb_product",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_link_ware_house_and_product",
+            "field": "ware_house_id"
+          },
+          "to": {
+            "entity": "tb_ware_house",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_specification",
+            "field": "bar_code"
+          },
+          "to": {
+            "entity": "tb_product",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_specification",
+            "field": "specification_template_id"
+          },
+          "to": {
+            "entity": "tb_specification_template",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_specification_template",
+            "field": "specifications"
+          },
+          "to": {
+            "entity": "tb_specification_option",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_product_category",
+            "field": "product_id"
+          },
+          "to": {
+            "entity": "tb_product",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_product_category",
+            "field": "categore_id"
+          },
+          "to": {
+            "entity": "tb_category",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_product",
+            "field": "brand_id"
+          },
+          "to": {
+            "entity": "tb_brand",
+            "field": "id"
+          }
+        },
+        {
+          "relation": "0,n:1",
+          "from": {
+            "entity": "tb_brand",
+            "field": "company_id"
+          },
+          "to": {
+            "entity": "tb_company_info",
             "field": "id"
           }
         }
